@@ -6,7 +6,7 @@ st.header('📊 Mi dashboard')
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 
 
-build_histogram = st.checkbox('Construir un histograma') # crear una casilla de verificación
+build_histogram = st.checkbox('Construir un histograma', key='check_1') # crear una casilla de verificación
 hist_button = st.button('Construir histograma') # crear un botón
 
 if build_histogram: # si la casilla de verificación está seleccionada
@@ -26,7 +26,7 @@ if hist_button: # al hacer clic en el botón
   st.plotly_chart(fig, use_container_width=True)
 
 
-build_scatter = st.checkbox('Construir un gráfico de dispersión') # crear una casilla de verificación
+build_scatter = st.checkbox('Construir un gráfico de dispersión', key='check_2') # crear una casilla de verificación
 disp_button = st.button('Construir gráfico de dispersión')
 
 if build_scatter: # si la casilla de verificación está seleccionada
